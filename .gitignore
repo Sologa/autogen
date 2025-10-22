@@ -192,6 +192,8 @@ local_cache
 notebook/result.png
 samples/apps/autogen-studio/autogenstudio/models/test/
 
+python/samples/pdf_review_agent/
+
 notebook/coding
 
 # dotnet artifacts
