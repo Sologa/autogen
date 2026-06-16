@@ -178,6 +178,7 @@ test/test_files/agenteval-in-out/out/
 # local cache or coding foler
 local_cache/
 coding/
+.specstory/
 
 # Files created by tests
 *tmp_code_*

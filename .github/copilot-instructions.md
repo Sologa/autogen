@@ -4,6 +4,32 @@ AutoGen is a multi-language framework for creating AI agents that can act autono
 
 Always reference these instructions first and fallback to search or bash commands only when you encounter unexpected information that does not match the info here.
 
+## MCP Tools Auto-Activation
+
+**CRITICAL**: At the start of every conversation thread, automatically activate all available MCP tools by calling these activation functions:
+
+```
+activate_filesystem_tools          # For file system operations
+activate_knowledge_graph_tools     # For memory/knowledge graph
+activate_obsidian_file_management_tools  # For Obsidian vault operations
+activate_mcp_tools_summary         # For the "everything" demo server
+```
+
+**When to activate**: 
+- At the beginning of each new conversation thread
+- Before attempting to use any mcp_filesystem_*, mcp_memory_*, mcp_obsidian_*, or mcp_everything_* tools
+- If you receive "Tool is currently disabled by the user" error
+
+**Available MCP servers** (from mcp.json):
+- `time` - timezone conversions (always enabled)
+- `sequential-thinking` - step-by-step reasoning (always enabled)
+- `fetch` - web content fetching (always enabled)
+- `gitkraken` - git/GitHub operations (always enabled)
+- `filesystem` - file system access (needs activation)
+- `memory` - knowledge graph storage (needs activation)
+- `obsidian` - Obsidian vault management (needs activation)
+- `everything` - MCP protocol demo tools (needs activation)
+
 ## Working Effectively
 
 ### Prerequisites and Environment Setup
